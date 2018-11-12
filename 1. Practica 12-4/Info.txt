@@ -1,0 +1,6 @@
+Práctica 12/4
+
+Corresponden a los ejercicios hechos la primera clase.
+Tienen como finalidad aprender el uso de las estructuras repetitivas
+y las sentencias condicionales. Así como la declaración y asignación
+de variables.
