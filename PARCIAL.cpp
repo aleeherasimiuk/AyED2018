@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 
-char* dias[9] = {"S·bado", "Domingo", "Jueves", "Lunes", "Martes", "MiÈrcoles", "Jueves", "Viernes", "Lunes"};
+char* dias[9] = {"S√°bado", "Domingo", "Jueves", "Lunes", "Martes", "Mi√©rcoles", "Jueves", "Viernes", "Lunes"};
 char* colores[9] = {"Negro", "Amarillo", "Blanco", "Rojo", "Verde", "Gris", "Violeta", "Celeste", "Azul"};
-char* caracteristicas[9] = {"Emprendedor", "Pasivo", "Optimista", "Pr·ctico", "Inestable", "Confiable", "Culto", "Organizado", "Docente"};
+char* caracteristicas[9] = {"Emprendedor", "Pasivo", "Optimista", "Pr√°ctico", "Inestable", "Confiable", "Culto", "Organizado", "Docente"};
 
 //Punto 1
 struct nodo{
@@ -106,18 +106,18 @@ unsigned int NumeroAfortunado(nodo* &pila){
 //Punto 4
 void MostrarResultado(unsigned int x){
 	x--;
-	cout << "El dÌa de la semana obtenido es: " << dias[x] << endl;
+	cout << "El d√≠a de la semana obtenido es: " << dias[x] << endl;
 	cout << "El color obtenido es: " << colores[x] << endl;
-	cout << "La caracterÌstica obtenida es: " << caracteristicas[x] << endl; 
+	cout << "La caracter√≠stica obtenida es: " << caracteristicas[x] << endl; 
 }
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void push(nodo* &pila, int valor){ //Recibe el puntero al inicio de la pila y el valor a ingresar
 	
-	nodo *p = new nodo(); //Crea de forma din·mica una instancia de nodo, una variable anÛnima
+	nodo *p = new nodo(); //Crea de forma din√°mica una instancia de nodo, una variable an√≥nima
 	
-	p -> info = valor; //En el campo info de la instancia reciÈn creada, se almacena el valor
+	p -> info = valor; //En el campo info de la instancia reci√©n creada, se almacena el valor
 	p -> sgte = pila; //En el campo 'siguiente' se almacena el lugar donde ANTES estaba el tope de la pila, es decir el primer elemento
 	pila = p; //Ahora el inicio de la pila, es el nodo que acabamos de crear
 	
@@ -125,12 +125,12 @@ void push(nodo* &pila, int valor){ //Recibe el puntero al inicio de la pila y el
 }
 
 
-//FunciÛn pop, retorna el valor del tope de la pila
-int pop(nodo* &pila){ //Recibe como par·metro el puntero al inicio de la pila
+//Funci√≥n pop, retorna el valor del tope de la pila
+int pop(nodo* &pila){ //Recibe como par√°metro el puntero al inicio de la pila
 	
 	nodo* p = pila; //Guardo de manera temporal el tope de la pila
 	int x = p -> info; //Extraigo el valor del nodo del tope de la pila
-	pila = p -> sgte; //Al puntero al inicio de la pila, le pongo el nodo que ahora est· quedando en el tope de la pila
+	pila = p -> sgte; //Al puntero al inicio de la pila, le pongo el nodo que ahora est√° quedando en el tope de la pila
 	delete p; //Libero memoria
 	return x; //Devuelvo el entero
 	
